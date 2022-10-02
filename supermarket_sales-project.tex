@@ -1,0 +1,562 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={supermarket\_sales-project.R},
+  pdfauthor={user},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{supermarket\_sales-project.R}
+\author{user}
+\date{2022-10-02}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#1.ASK}
+\CommentTok{\#1.0 Business task}
+\CommentTok{\#.The average sales amount and the number of sales at each branch }
+\CommentTok{\#.The average unit price for each product line}
+\CommentTok{\#.Do branches make more sale on a specific day of the week}
+\CommentTok{\#.distribution of average sales amount by gender}
+\CommentTok{\#.distribution of average sales amount by gender per branch}
+\CommentTok{\#which is the most popular product line by quantity sold}
+\CommentTok{\#which is the most profitable product line}
+\CommentTok{\#1.1 Stakeholders}
+\CommentTok{\#stakeholders include the following}
+\CommentTok{\#.Marketing \& sales director}
+\CommentTok{\#.Analytics team}
+\CommentTok{\#.Sales team}
+\CommentTok{\#2.PREPARE}
+\CommentTok{\#.The data is located on Kaggle \& contains sales data of different branches over a 3 month period.}
+\CommentTok{\#.Data is organized in csv files}
+\CommentTok{\#.Credibility of data not in question}
+\CommentTok{\#.This data has been stripped of all identifying information ensuring its privacy}
+\CommentTok{\#3.PROCESS}
+\CommentTok{\#.For this project I choose RStudio Desktop in order to prepare, process, clean, analyze and create the visualizations.}
+\CommentTok{\#Data review involved the following:}
+\CommentTok{\#.Checking column names across all the 12 original files.}
+\CommentTok{\#.Checking for missing values.}
+\CommentTok{\#.Checking of white spaces.}
+\CommentTok{\#.Checking of duplicate records.}
+\CommentTok{\#3.1 COLLECT \& DATA WRANGLING}
+\CommentTok{\#load readr for reading rectangular data}
+\CommentTok{\#load dplyr for data wrangling}
+\CommentTok{\#load ggplot2 for data visualization}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\CommentTok{\#read data set using the read\_csv function}
+\NormalTok{supermarket\_sales}\OtherTok{\textless{}{-}}\FunctionTok{read\_csv}\NormalTok{(}\StringTok{"C:/Users/user/Desktop/RSTUDIO/supermarket\_sales.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 1000 Columns: 17
+\end{verbatim}
+
+\begin{verbatim}
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (8): Invoice_ID, Branch, City, Customer_type, Gender, Product_line, Dat...
+## dbl  (8): Unit_price, Quantity, Tax _5%, Total, cogs, gross_margin_percentag...
+## time (1): Time
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#3.2 Data Validation}
+\FunctionTok{head}\NormalTok{(supermarket\_sales,}\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 17
+##   Invoice_ID  Branch City  Customer_type Gender Product_line Unit_price Quantity
+##   <chr>       <chr>  <chr> <chr>         <chr>  <chr>             <dbl>    <dbl>
+## 1 750-67-8428 A      Yang~ Member        Female Health and ~       74.7        7
+## 2 226-31-3081 C      Nayp~ Normal        Female Electronic ~       15.3        5
+## 3 631-41-3108 A      Yang~ Normal        Male   Home and li~       46.3        7
+## 4 123-19-1176 A      Yang~ Member        Male   Health and ~       58.2        8
+## 5 373-73-7910 A      Yang~ Normal        Male   Sports and ~       86.3        7
+## # ... with 9 more variables: Tax _5% <dbl>, Total <dbl>, Date <chr>,
+## #   Time <time>, Payment <chr>, cogs <dbl>, gross_margin_percentage <dbl>,
+## #   gross_income <dbl>, Rating <dbl>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{tail}\NormalTok{(supermarket\_sales)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 17
+##   Invoice_ID  Branch City  Customer_type Gender Product_line Unit_price Quantity
+##   <chr>       <chr>  <chr> <chr>         <chr>  <chr>             <dbl>    <dbl>
+## 1 652-49-6720 C      Nayp~ Member        Female Electronic ~       61.0        1
+## 2 233-67-5758 C      Nayp~ Normal        Male   Health and ~       40.4        1
+## 3 303-96-2227 B      Mand~ Normal        Female Home and li~       97.4       10
+## 4 727-02-1313 A      Yang~ Member        Male   Food and be~       31.8        1
+## 5 347-56-2442 A      Yang~ Normal        Male   Home and li~       65.8        1
+## 6 849-09-3807 A      Yang~ Member        Female Fashion acc~       88.3        7
+## # ... with 9 more variables: Tax _5% <dbl>, Total <dbl>, Date <chr>,
+## #   Time <time>, Payment <chr>, cogs <dbl>, gross_margin_percentage <dbl>,
+## #   gross_income <dbl>, Rating <dbl>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(supermarket\_sales)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## spec_tbl_df [1,000 x 17] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Invoice_ID             : chr [1:1000] "750-67-8428" "226-31-3081" "631-41-3108" "123-19-1176" ...
+##  $ Branch                 : chr [1:1000] "A" "C" "A" "A" ...
+##  $ City                   : chr [1:1000] "Yangon" "Naypyitaw" "Yangon" "Yangon" ...
+##  $ Customer_type          : chr [1:1000] "Member" "Normal" "Normal" "Member" ...
+##  $ Gender                 : chr [1:1000] "Female" "Female" "Male" "Male" ...
+##  $ Product_line           : chr [1:1000] "Health and beauty" "Electronic accessories" "Home and lifestyle" "Health and beauty" ...
+##  $ Unit_price             : num [1:1000] 74.7 15.3 46.3 58.2 86.3 ...
+##  $ Quantity               : num [1:1000] 7 5 7 8 7 7 6 10 2 3 ...
+##  $ Tax _5%                : num [1:1000] 26.14 3.82 16.22 23.29 30.21 ...
+##  $ Total                  : num [1:1000] 549 80.2 340.5 489 634.4 ...
+##  $ Date                   : chr [1:1000] "1/5/2019" "3/8/2019" "3/3/2019" "1/27/2019" ...
+##  $ Time                   : 'hms' num [1:1000] 13:08:00 10:29:00 13:23:00 20:33:00 ...
+##   ..- attr(*, "units")= chr "secs"
+##  $ Payment                : chr [1:1000] "Ewallet" "Cash" "Credit card" "Ewallet" ...
+##  $ cogs                   : num [1:1000] 522.8 76.4 324.3 465.8 604.2 ...
+##  $ gross_margin_percentage: num [1:1000] 4.76 4.76 4.76 4.76 4.76 ...
+##  $ gross_income           : num [1:1000] 26.14 3.82 16.22 23.29 30.21 ...
+##  $ Rating                 : num [1:1000] 9.1 9.6 7.4 8.4 5.3 4.1 5.8 8 7.2 5.9 ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   Invoice_ID = col_character(),
+##   ..   Branch = col_character(),
+##   ..   City = col_character(),
+##   ..   Customer_type = col_character(),
+##   ..   Gender = col_character(),
+##   ..   Product_line = col_character(),
+##   ..   Unit_price = col_double(),
+##   ..   Quantity = col_double(),
+##   ..   `Tax _5%` = col_double(),
+##   ..   Total = col_double(),
+##   ..   Date = col_character(),
+##   ..   Time = col_time(format = ""),
+##   ..   Payment = col_character(),
+##   ..   cogs = col_double(),
+##   ..   gross_margin_percentage = col_double(),
+##   ..   gross_income = col_double(),
+##   ..   Rating = col_double()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{glimpse}\NormalTok{(supermarket\_sales)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 1,000
+## Columns: 17
+## $ Invoice_ID              <chr> "750-67-8428", "226-31-3081", "631-41-3108", "~
+## $ Branch                  <chr> "A", "C", "A", "A", "A", "C", "A", "C", "A", "~
+## $ City                    <chr> "Yangon", "Naypyitaw", "Yangon", "Yangon", "Ya~
+## $ Customer_type           <chr> "Member", "Normal", "Normal", "Member", "Norma~
+## $ Gender                  <chr> "Female", "Female", "Male", "Male", "Male", "M~
+## $ Product_line            <chr> "Health and beauty", "Electronic accessories",~
+## $ Unit_price              <dbl> 74.69, 15.28, 46.33, 58.22, 86.31, 85.39, 68.8~
+## $ Quantity                <dbl> 7, 5, 7, 8, 7, 7, 6, 10, 2, 3, 4, 4, 5, 10, 10~
+## $ `Tax _5%`               <dbl> 26.1415, 3.8200, 16.2155, 23.2880, 30.2085, 29~
+## $ Total                   <dbl> 548.9715, 80.2200, 340.5255, 489.0480, 634.378~
+## $ Date                    <chr> "1/5/2019", "3/8/2019", "3/3/2019", "1/27/2019~
+## $ Time                    <time> 13:08:00, 10:29:00, 13:23:00, 20:33:00, 10:37~
+## $ Payment                 <chr> "Ewallet", "Cash", "Credit card", "Ewallet", "~
+## $ cogs                    <dbl> 522.83, 76.40, 324.31, 465.76, 604.17, 597.73,~
+## $ gross_margin_percentage <dbl> 4.761905, 4.761905, 4.761905, 4.761905, 4.7619~
+## $ gross_income            <dbl> 26.1415, 3.8200, 16.2155, 23.2880, 30.2085, 29~
+## $ Rating                  <dbl> 9.1, 9.6, 7.4, 8.4, 5.3, 4.1, 5.8, 8.0, 7.2, 5~
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#4Data Cleaning}
+\CommentTok{\#Check for missing values}
+\FunctionTok{colSums}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(supermarket\_sales))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##              Invoice_ID                  Branch                    City 
+##                       0                       0                       0 
+##           Customer_type                  Gender            Product_line 
+##                       0                       0                       0 
+##              Unit_price                Quantity                 Tax _5% 
+##                       0                       0                       0 
+##                   Total                    Date                    Time 
+##                       0                       0                       0 
+##                 Payment                    cogs gross_margin_percentage 
+##                       0                       0                       0 
+##            gross_income                  Rating 
+##                       0                       0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#check for duplicates}
+\FunctionTok{distinct}\NormalTok{(supermarket\_sales)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1,000 x 17
+##    Invoice_ID Branch City  Customer_type Gender Product_line Unit_price Quantity
+##    <chr>      <chr>  <chr> <chr>         <chr>  <chr>             <dbl>    <dbl>
+##  1 750-67-84~ A      Yang~ Member        Female Health and ~       74.7        7
+##  2 226-31-30~ C      Nayp~ Normal        Female Electronic ~       15.3        5
+##  3 631-41-31~ A      Yang~ Normal        Male   Home and li~       46.3        7
+##  4 123-19-11~ A      Yang~ Member        Male   Health and ~       58.2        8
+##  5 373-73-79~ A      Yang~ Normal        Male   Sports and ~       86.3        7
+##  6 699-14-30~ C      Nayp~ Normal        Male   Electronic ~       85.4        7
+##  7 355-53-59~ A      Yang~ Member        Female Electronic ~       68.8        6
+##  8 315-22-56~ C      Nayp~ Normal        Female Home and li~       73.6       10
+##  9 665-32-91~ A      Yang~ Member        Female Health and ~       36.3        2
+## 10 692-92-55~ B      Mand~ Member        Female Food and be~       54.8        3
+## # ... with 990 more rows, and 9 more variables: Tax _5% <dbl>, Total <dbl>,
+## #   Date <chr>, Time <time>, Payment <chr>, cogs <dbl>,
+## #   gross_margin_percentage <dbl>, gross_income <dbl>, Rating <dbl>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#5.Analysis}
+\CommentTok{\#.The average sales amount per branch}
+\NormalTok{avg\_sales\_amnt}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Branch)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_sales=}\FunctionTok{mean}\NormalTok{(Total))}
+\NormalTok{avg\_sales\_amnt}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+##   Branch avg_sales
+##   <chr>      <dbl>
+## 1 A           312.
+## 2 B           320.
+## 3 C           337.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.The average unit price of products in each product line}
+\NormalTok{avg\_unit\_price}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Product\_line)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_unit\_price=}\FunctionTok{mean}\NormalTok{(Unit\_price))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(avg\_unit\_price))}
+\NormalTok{avg\_unit\_price}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   Product_line           avg_unit_price
+##   <chr>                           <dbl>
+## 1 Fashion accessories              57.2
+## 2 Sports and travel                57.0
+## 3 Food and beverages               56.0
+## 4 Home and lifestyle               55.3
+## 5 Health and beauty                54.9
+## 6 Electronic accessories           53.6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.distribution of average sales amount by gender}
+\NormalTok{avg\_sales\_by\_gender}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Gender)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_sales=}\FunctionTok{mean}\NormalTok{(Total))}
+\NormalTok{avg\_sales\_by\_gender}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 2 x 2
+##   Gender avg_sales
+##   <chr>      <dbl>
+## 1 Female      335.
+## 2 Male        311.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.distribution of average sales amount by gender per branch}
+\NormalTok{avg\_sales\_by\_gender\_branch}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Gender,Branch)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_sales=}\FunctionTok{mean}\NormalTok{(Total))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'Gender'. You can override using the `.groups` argument.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{avg\_sales\_by\_gender\_branch}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 3
+## # Groups:   Gender [2]
+##   Gender Branch avg_sales
+##   <chr>  <chr>      <dbl>
+## 1 Female A           331.
+## 2 Female B           327.
+## 3 Female C           347.
+## 4 Male   A           296.
+## 5 Male   B           313.
+## 6 Male   C           326.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#which is the most popular product line by quantity sold}
+\NormalTok{popular\_product}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Product\_line)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_qnty=}\FunctionTok{mean}\NormalTok{(Quantity))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(avg\_qnty))}
+\NormalTok{popular\_product}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   Product_line           avg_qnty
+##   <chr>                     <dbl>
+## 1 Electronic accessories     5.71
+## 2 Home and lifestyle         5.69
+## 3 Health and beauty          5.62
+## 4 Sports and travel          5.54
+## 5 Food and beverages         5.47
+## 6 Fashion accessories        5.07
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#which is the most profitable product line}
+\NormalTok{profitable\_product}\OtherTok{\textless{}{-}}\NormalTok{supermarket\_sales}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Product\_line)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_gross\_income=}\FunctionTok{mean}\NormalTok{(gross\_income))}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(avg\_gross\_income))}
+\NormalTok{profitable\_product}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   Product_line           avg_gross_income
+##   <chr>                             <dbl>
+## 1 Home and lifestyle                 16.0
+## 2 Sports and travel                  15.8
+## 3 Health and beauty                  15.4
+## 4 Food and beverages                 15.4
+## 5 Electronic accessories             15.2
+## 6 Fashion accessories                14.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#6.VISUALIZATON}
+\CommentTok{\#.The average sales amount per branch}
+\FunctionTok{ggplot}\NormalTok{(avg\_sales\_amnt, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Branch,}\AttributeTok{y=}\NormalTok{avg\_sales))}\SpecialCharTok{+}
+         \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.The average unit price of products in each product line}
+\FunctionTok{ggplot}\NormalTok{(avg\_unit\_price,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Product\_line,}\AttributeTok{y=}\NormalTok{avg\_unit\_price))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.distribution of average sales amount by gender}
+\FunctionTok{ggplot}\NormalTok{(avg\_sales\_by\_gender,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Gender,}\AttributeTok{y=}\NormalTok{avg\_sales,}\AttributeTok{color=}\NormalTok{Gender))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#.distribution of average sales amount by gender per branch}
+\FunctionTok{ggplot}\NormalTok{(avg\_sales\_by\_gender\_branch,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Gender,}\AttributeTok{y=}\NormalTok{avg\_sales))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{Branch)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#which is the most popular product line by quantity sold}
+\FunctionTok{ggplot}\NormalTok{(popular\_product,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Product\_line,}\AttributeTok{y=}\NormalTok{avg\_qnty))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#which is the most profitable product line}
+\FunctionTok{ggplot}\NormalTok{(profitable\_product,}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{Product\_line,}\AttributeTok{y=}\NormalTok{avg\_gross\_income,}\AttributeTok{color=}\NormalTok{Product\_line))}\SpecialCharTok{+}
+  \FunctionTok{geom\_col}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{supermarket_sales-project_files/figure-latex/unnamed-chunk-1-6.pdf}
+
+\end{document}
